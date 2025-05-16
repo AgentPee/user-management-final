@@ -44,5 +44,10 @@
     "ts-node": "^8.3.0",
     "tslint": "^6.1.0",
     "typescript": "^5.8.2"
-  }
+  },
+  "main": "fix-form-controls.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
