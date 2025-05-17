@@ -1,4 +1,4 @@
-﻿import { Injectable } from '@angular/core';
+﻿﻿import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, of } from 'rxjs';
@@ -55,9 +55,9 @@ export class AccountService {
         return this.http.post(`${baseUrl}/register`, account);
     }
 
-    verifyEmail(token: string) {
+    /*verifyEmail(token: string) {
         return this.http.post(`${baseUrl}/verify-email`, { token });
-    }
+    }*/
     
     forgotPassword(email: string) {
         return this.http.post(`${baseUrl}/forgot-password`, { email });
