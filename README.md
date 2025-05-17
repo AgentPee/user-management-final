@@ -1,3 +1,5 @@
 # INTPROG FINAL
+for admin
+email: espinosaadmin@gmail.com
 
-espinosa:
+pass: password
