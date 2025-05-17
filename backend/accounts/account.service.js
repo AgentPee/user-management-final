@@ -264,7 +264,7 @@ function basicDetails(account) {
     return { id, title, firstName, lastName, email, role, created, updated, isVerified, verificationToken, status };
 }
 
-async function sendVerificationEmail(account, origin) {
+/*async function sendVerificationEmail(account, origin) {
     let message;
     if (origin) {
         const verifyUrl = `${origin}/account/verify-email?token=${account.verificationToken}`;
@@ -283,7 +283,7 @@ async function sendVerificationEmail(account, origin) {
                ${message}`
     });
 }
-
+*/
 async function sendAlreadyRegisteredEmail(email, origin) {
     let message;
     if (origin) {
