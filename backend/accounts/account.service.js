@@ -35,10 +35,10 @@ async function authenticate({ email, password, ipAddress }) {
         throw 'Password is incorrect';
     }
 
-    if (account.id !== 1) {
+    /*if (account.id !== 1) {
         if (!account.isVerified) {
             throw 'Email is not verified';
-        }
+        }*/
     
         if (!account || account.status !== 'Active') {
             throw 'Account is InActive. Please contact system administrator!';
@@ -260,8 +260,8 @@ function randomTokenString() {
 }
 
 function basicDetails(account) {
-    const { id, title, firstName, lastName, email, role, created, updated, isVerified, verificationToken, status } = account;
-    return { id, title, firstName, lastName, email, role, created, updated, isVerified, verificationToken, status };
+    const { id, title, firstName, lastName, email, role, created, updated,  verificationToken, status } = account;
+    return { id, title, firstName, lastName, email, role, created, updated,  verificationToken, status };
 }
 
 /*async function sendVerificationEmail(account, origin) {
