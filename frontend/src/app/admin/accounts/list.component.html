@@ -19,9 +19,13 @@
             <td>{{account.role}}</td>
             <td style="white-space: nowrap">
                 <a routerLink="edit/{{account.id}}" class="btn btn-sm btn-primary mr-1">Edit</a>
-                <a href="javascript:void(0)" (click)="deleteAccount(account.id)" class="btn btn-sm btn-danger btn-delete-account" [class.disabled]="account.isDeleting" [attr.aria-disabled]="account.isDeleting">
-                    <span *ngIf="account.isDeleting" class="spinner-border spinner-border-sm"></span>
-                    <span *ngIf="!account.isDeleting">Delete</span>
+                <a href="javascript:void(0)" 
+                    (click)="deleteAccount(account.id)" 
+                    class="btn btn-sm btn-danger btn-delete-account" 
+                    [class.disabled]="account.isDeleting" 
+                    [attr.aria-disabled]="account.isDeleting">
+                        <span *ngIf="account.isDeleting" class="spinner-border spinner-border-sm"></span>
+                        <span *ngIf="!account.isDeleting">Delete</span>
                 </a>
             </td>
         </tr>
