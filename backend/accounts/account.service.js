@@ -35,7 +35,7 @@ async function authenticate({ email, password, ipAddress }) {
         throw 'Password is incorrect';
     }
 
-    if (!account || accounts.status !== 'Active') {
+    if (!account || account.status !== 'Active') {
         throw 'Account is InActive. Please contact system administrator!';
     }
 
