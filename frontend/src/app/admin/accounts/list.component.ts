@@ -20,6 +20,12 @@ export class ListComponent implements OnInit {
 
     deleteAccount(id: string) {
         const account = this.accounts.find(x => x.id === id);
+        if (account && account.role === 'Admin') {
+            const confirmed = window.confirm('Warning: You are about to delete an Admin account. Are you sure?');
+            if (!confirmed) {
+                return;
+            }
+        }
         account.isDeleting = true;
         this.accountService.delete(id)
             .pipe(first())
